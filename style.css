@@ -30,13 +30,13 @@ body {
 }
 
 .container {
-  max-width: 114rem;
+  /* max-width: 114rem; */
   height: 100vh;
   margin: 0 auto;
   padding: 10.2rem 2.4rem;
   background-image: url("images/pattern-background-desktop.svg");
   background-repeat: no-repeat;
-  background-size: 100% 46rem;
+  background-size: 100% 40rem;
   background-color: var(--color-pale-blue);
 }
 
