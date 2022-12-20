@@ -1,0 +1,222 @@
+:root {
+  --color-pale-blue: hsl(225, 100%, 94%);
+  --color-bright-blue: hsl(245, 75%, 52%);
+  --color-very-pale-blue: hsl(228, 100%, 98%);
+  --color-desaturated-blue: hsl(224, 23%, 55%);
+  --color-dark-blue: hsl(223, 47%, 23%);
+  --color-text: hsl(345, 6%, 13%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-hover: hsla(245, 83%, 68%, 1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-pale-blue);
+  font-size: 1.6rem;
+  font-family: "Red Hat Display", sans-serif;
+  color: var(--color-text);
+}
+
+.container {
+  max-width: 114rem;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 10.2rem 2.4rem;
+  background-image: url("images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 46rem;
+  background-color: var(--color-pale-blue);
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    background-image: url("images/pattern-background-mobile.svg");
+    background-size: 100% 25.4rem;
+  }
+}
+
+.card {
+  max-width: 45rem;
+  margin: 0 auto;
+  background-color: var(--color-white);
+
+  border-radius: 2rem;
+  overflow: hidden;
+  box-shadow: 0px 40px 40px -20px rgba(13, 48, 189, 0.15);
+}
+
+.card__image {
+  max-width: 45rem;
+  height: auto;
+}
+
+.card__content {
+  padding: 4.5rem 4.8rem 4.8rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 439px) {
+  .card__content {
+    padding: 2.4rem;
+  }
+}
+
+.heading-primary {
+  font-weight: 900;
+  font-size: 2.8rem;
+  line-height: 3.7rem;
+  margin-bottom: 1.7rem;
+}
+
+@media screen and (max-width: 375px) {
+  .heading-primary {
+    font-size: 2.2rem;
+    margin-bottom: 1.6rem;
+  }
+}
+
+.card__info {
+  font-weight: 500;
+  line-height: 2.6rem;
+  color: var(--color-desaturated-blue);
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 375px) {
+  .card__info {
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.card__payment-plan {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 2.5rem;
+  background-color: var(--color-very-pale-blue);
+  border-radius: 1.1rem;
+  margin-bottom: 3.2rem;
+}
+
+@media screen and (max-width: 389px) {
+  .card__payment-plan {
+    padding: 1.7rem;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.card__payment-plan--icon {
+  width: 4.8rem;
+}
+
+.card__payment-plan--price {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.card__payment-plan--price-text {
+  font-weight: 900;
+  line-height: 2.1rem;
+}
+
+@media screen and (max-width: 375px) {
+  .card__payment-plan--price-text,
+  .card__payment-plan--price-amount {
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+  }
+}
+
+.card__payment-plan--price-amount {
+  font-weight: 500;
+  color: var(--color-desaturated-blue);
+  line-height: 2.1rem;
+}
+
+.card__payment-plan--change:link,
+.card__payment-plan--change:link:visited {
+  margin-left: auto;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--color-bright-blue);
+  transition: all 0.2s;
+}
+
+@media screen and (max-width: 375px) {
+  .card__payment-plan--change:link,
+  .card__payment-plan--change:link:visited {
+    font-size: 1.3rem;
+  }
+}
+
+.card__payment-plan--change:hover,
+.card__payment-plan--change:link:active {
+  color: var(--color-hover);
+  text-decoration: none;
+}
+
+.card__payment-cta {
+  border: none;
+  background-color: var(--color-bright-blue);
+  color: var(--color-white);
+  font-style: normal;
+  font-weight: 900;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding: 1.5rem 0;
+  display: block;
+  width: 100%;
+  border-radius: 1.1rem;
+  box-shadow: 0px 20px 20px rgba(56, 42, 225, 0.19);
+  margin-bottom: 3.2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+@media screen and (max-width: 375px) {
+  .card__payment-cta {
+    margin-bottom: 2.4rem;
+  }
+}
+
+.card__payment-cta:hover {
+  background-color: var(--color-hover);
+}
+
+.card__payment-cancel {
+  border: none;
+  background-color: transparent;
+  font-weight: 900;
+  color: var(--color-desaturated-blue);
+  font-size: 1.5rem;
+  line-height: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.card__payment-cancel:hover {
+  color: initial;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: scale-down;
+  background-position: center;
+}
